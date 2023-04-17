@@ -1,0 +1,1 @@
+Pre - Task Assignment of Full Stack Intern for Meydit 
