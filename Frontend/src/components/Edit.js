@@ -28,7 +28,7 @@ function Edit() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put("http://localhost:8000/products/" + id, data).then((res) => {
+    axios.put("https://productapi-08xg.onrender.com/products/" + id, data).then((res) => {
       alert("Data Updated Succesfully!");
       navigate("/");
     });
