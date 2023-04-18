@@ -40,11 +40,12 @@ function ProductList() {
           {records.map((item, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>{item.title}</td>
-              <td>{item.description}</td>
-              <td>{item.price}</td>
-              <td>{item.stock}</td>
               <td>{item.brand}</td>
+              <td>{item.stock}</td>
+              <td>{item.price}</td>
+              <td>{item.description}</td>
+              <td>{item.title}</td>
+
               <td>
                 <button className="edit">
                   <Link to={`/update/${item._id}`}>Edit</Link>
