@@ -24,7 +24,7 @@ function AddProduct() {
     };
 
     axios
-      .post("http://localhost:8000/products", data)
+      .post("https://productapi-08xg.onrender.com/products", data)
       .then((res) => {
         alert("Data Added Successfully!");
         // console.log("Data successfully submitted:", res.data);

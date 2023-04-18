@@ -15,7 +15,7 @@ function Edit() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/products/" + id)
+      .get("https://productapi-08xg.onrender.com/products/" + id)
       .then((res) => setData(res.data))
       .catch((e) => console.log(e));
   }, [id]);

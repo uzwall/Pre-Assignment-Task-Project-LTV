@@ -3,14 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-
 function ProductList() {
   const [columns, setColumns] = useState([]);
   const [records, setRecords] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:8000/products/").then((res) => {
+    axios.get("https://productapi-08xg.onrender.com/products/").then((res) => {
       setColumns(Object.keys(res.data[0]).filter((item) => item !== "__v"));
       setRecords(res.data);
     });
@@ -18,7 +17,7 @@ function ProductList() {
 
   function deleteSubmit(id) {
     axios
-      .delete("http://localhost:8000/products/" + id)
+      .delete("https://productapi-08xg.onrender.com/products/" + id)
       .then((res) => {
         alert("Data has Deleted Successfully!");
         navigate("/");
